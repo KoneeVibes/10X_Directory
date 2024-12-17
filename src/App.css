@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@media screen and (min-width: 0px) {
+
+    html,
+    body,
+    #root {
+        box-sizing: border-box;
+        margin: 0;
+        min-height: 100vh;
+        background-color: #FAFBFF;
+        --basic-padding: 2rem;
+        --basic-margin: 2rem;
+        --flex-gap: 2rem;
+        --side-nav-width: 20.125rem;
+        --top-nav-height: 7.5rem;
+    }
+
+    /* The below are relevant to side navigation */
+
+    .app-icon {
+        margin-block-end: var(--basic-margin);
+    }
+
+    .app-icon>.MuiListItemText-root>* {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: normal;
+    }
+
+    .Side-Nav-Item {
+        border-radius: 8px;
+        color: #9197B3;
+    }
+
+    .Side-Nav-Item .MuiListItemButton-root:hover {
+        color: #FFFFFF;
+        border-radius: 8px;
+        background: #722F49;
+    }
+
+    .Side-Nav-Item .MuiListItemText-root>* {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    #Users .Users-item>*,
+    #Opportunities .Opportunities-item>* {
+        color: #FFFFFF;
+        background-color: #722F49;
+        border-radius: 8px;
+    }
+
+    /* The below are relevant to the modals */
+    .Mui-focused {
+        display: none;
+    }
+
+    .add-user-form-modal form,
+    .update-user-form-modal form,
+    .add-user-successful-modal .MuiDialog-paper,
+    .update-user-role-successful-modal .MuiDialog-paper,
+    .suspend-user-successful-modal .MuiDialog-paper,
+    .suspend-user-confirmation-modal .MuiDialog-paper,
+    .delete-opportunity-successful-modal .MuiDialog-paper,
+    .delete-opportunity-confirmation-modal .MuiDialog-paper,
+    .edit-opportunity-successful-alert-modal .MuiDialog-paper,
+    .add-opportunity-post-success-confirmation-modal .MuiDialog-paper,
+    .opportunity-details-modal .MuiDialog-paper {
+        border-radius: 15px;
+        max-width: 28rem;
+        width: -webkit-fill-available;
+    }
+
+    /* The below is for all the loaders in the application */
+    .loader {
+        width: calc(0.75 * var(--basic-padding)) !important;
+        height: auto !important;
+    }
+
+    * {
+        /* outline: 1px red solid; */
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (max-width: 425px) {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    html,
+    body,
+    #root {
+        --side-nav-width: 100%;
+    }
 }

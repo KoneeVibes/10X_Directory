@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home2/xng/public_html/opportunities.10x.ng
+ - /bin/cp -R /home2/xng/repositories/opportunities/build/* $DEPLOYPATH
+ 
